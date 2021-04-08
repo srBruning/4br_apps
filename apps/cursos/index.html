@@ -22,26 +22,38 @@
         /></noscript>
         <!-- End Facebook Pixel Code -->
         <style type="text/css">
-/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
-@media screen and (max-width: 1001px) {       
-       .card-body {
+        /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+        @media screen and (max-width: 1001px) {       
+            .card-body {
+                    font-size: 30px;
+                }
+            .card-body h5 {
+                    font-size: 40px;
+                }
+            .btn-detalhes-curso a {
+                font-size: 50px;
+            }
+            .h1, h1 {
+                font-size: 7.5rem;
+            }
+            #links_semana img.card-img-top {
+                max-height: 140px;
+            }
+            #cards_cursos .card {
+                padding-bottom: 35px;
+            }
+        }
+
+        /* If the screen size is 600px wide or less, set the font-size of <div> to 30px  */
+        @media screen and (max-width: 600px) {
+        p.card-text {
             font-size: 30px;
         }
-       .card-body h5 {
-            font-size: 40px;
-        }
-}
-
- If the screen size is 600px wide or less, set the font-size of <div> to 30px 
-@media screen and (max-width: 600px) {
-  p.card-text {
-    font-size: 30px;
-  }
 }
         </style>
     </head>
 
-    <body>
+    <body class="index">
         <header class="header">
             <div class="navbar navbar-expand-lg navbar-light py-3 nav">
                 <div class="container"><a href="#" class="navbar-brand">
@@ -78,7 +90,7 @@
             </div>
             <br>
             <h1>Cursos: </h1>
-            <div class="row card-deck">
+            <div class="row card-deck" id="cards_cursos">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-4">
                         <div class="card">
                         <img class="card-img-top" src="images/react_native.png" alt="react native">
